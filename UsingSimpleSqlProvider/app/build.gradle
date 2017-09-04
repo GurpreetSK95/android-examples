@@ -1,8 +1,8 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.3"
+    compileSdkVersion compileSdkVer
+    buildToolsVersion buildToolsVer
     defaultConfig {
         applicationId "me.gurpreetsk.usingsimplesqlprovider"
         minSdkVersion 15
@@ -28,9 +28,9 @@ dependencies {
     androidTestCompile("com.android.support.test.espresso:espresso-core:$espressoCoreVer", {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    //$supportLibVer
-    compile "com.android.support:appcompat-v7:25.4.0"
-    compile "com.android.support:design:25.4.0"
+
+    compile "com.android.support:appcompat-v7:$supportLibVer"
+    compile "com.android.support:design:$supportLibVer"
 
     compile "com.squareup:javapoet:$javaPoetVer"
     compile "ckm.simple:simple_sql_provider_annotation:$simpleSqlProviderVer"
